@@ -3,6 +3,7 @@ package T2Ejrs2;
 import java.util.Scanner;
 
 public class Ejer_7 {
+
     /*Pide por teclado dos números y genera 10 números aleatorios entre esos números.
     Usa el método Math.random para generar un número entero aleatorio (recuerda el casting de double a int).
     */

@@ -3,6 +3,7 @@ package T2Ejrs2;
 import java.util.Scanner;
 
 public class Ejer_11 {
+
     /*
     Programa un juego que genere un número aleatorio y te permita introducir números hasta que des con el adecuado.
     El juego deberá indicarte si el número introducido es mayor o menor.

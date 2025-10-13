@@ -3,6 +3,7 @@ package T2Ejrs2;
 public class Ejer_8 {
 
     // Muestra los números primos entre 1 y 100.
+
     static void main() {
 
         System.out.println("Numeros primos entre 1 y 100: ");

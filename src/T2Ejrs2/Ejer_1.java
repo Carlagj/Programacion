@@ -3,6 +3,7 @@ package T2Ejrs2;
 import java.util.Scanner;
 
 public class Ejer_1 {
+
     // Crea un programa que te pida la altura de un triángulo rectángulo y lo muestre con asteriscos.
 
     static void main() {

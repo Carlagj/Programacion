@@ -7,6 +7,7 @@ public class Ejer_9 {
     /* Mostrar los N primeros términos de la serie de Fibonacci.
     N se definirá como una variable.
      */
+
     static void main() {
 
         int N = 20; // numero de terminos que queremos mostrar

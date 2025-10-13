@@ -3,7 +3,9 @@ package T2Ejrs2;
 import java.util.Scanner;
 
 public class Ejer_10 {
+
     //Igual que el anterior, pero el valor de N se leerá por teclado.
+
     static void main() {
         Scanner scanner = new Scanner(System.in);
 

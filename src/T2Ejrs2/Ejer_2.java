@@ -3,9 +3,12 @@ package T2Ejrs2;
 import java.util.Scanner;
 
 public class Ejer_2 {
-    /* Realizar un programa que calcule la potencia de un número baseexponente.
+
+    /*
+    Realizar un programa que calcule la potencia de un número baseexponente.
    La potencia se hará por medio de multiplicaciones, está prohibido usar Math.pow()
     */
+
     static void main() {
         Scanner scanner = new Scanner(System.in);
     // pedir por pantalla

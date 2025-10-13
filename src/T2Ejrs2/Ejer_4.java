@@ -3,7 +3,8 @@ package T2Ejrs2;
 import java.util.Scanner;
 
 public class Ejer_4 {
-//Desarrolla un programa que pida un número por teclado y te muestre el número de cifras que tiene.
+
+    //Desarrolla un programa que pida un número por teclado y te muestre el número de cifras que tiene.
 
     static void main() {
         Scanner scanner = new Scanner(System.in);

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ejer_5 {
 
-    //Desarrolla un programa que solicite un número n y luego muestre por pantalla la siguiente figura:
+    //Desarrolla un programa que solicite un número n y luego muestre por pantalla.
 
     static void main() {
         Scanner scanner = new Scanner(System.in);

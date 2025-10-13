@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ejer_3 {
 
-    //Crea un programa en el que introduzcas una nota del 1 al 10 y te indique su nota en formato escrito (insuficiente, suficiente, etc.).
+    //Crea un programa en el que introduzcas una nota del 1 al 10 y te indique su nota en formato escrito (insuficiente, suficiente, etc).
 
     static void main() {
         Scanner scanner = new Scanner(System.in);
