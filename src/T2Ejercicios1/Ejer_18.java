@@ -7,12 +7,13 @@ public class Ejer_18 {
 
         //Escribir un programa en Java que multiplique los 20 primeros números naturales (1*2*3*4*5…).
 
-        BigInteger resultado = BigInteger.ONE;
+        long resultado = 1; // empezamos en 1
 
-        for (int i =1; i <= 20; i++) {
-            resultado = resultado.multiply(BigInteger.valueOf(i));
+        for (int i = 1; i <= 20; i++) {
+            long anterior = resultado ;
+            resultado = resultado * i;
+
+            System.out.println(anterior + " x " + i + " = " + resultado);
         }
-        System.out.println("El resultado de multiplicar los 20 primeros numeros naturales es: " );
-        System.out.println(resultado);
     }
 }
