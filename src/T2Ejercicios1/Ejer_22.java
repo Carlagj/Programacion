@@ -3,7 +3,7 @@ package T2Ejercicios1;
 import java.util.Scanner;
 
 public class Ejer_22 {
-    static void main() {
+    public static void main(String[] args) {
 
         /*
         Desarrolla un programa que lea números hasta que se introduzca un número negativo y después indique si se ha dado el mismo número dos veces consecutivas:
@@ -11,10 +11,12 @@ public class Ejer_22 {
         Da como salida: No
         Introduciendo: 1 3 5 6 6 4 3 –1
         Da como salida : Si
+
+        do while hacer
          */
 
         Scanner scanner = new Scanner(System.in);
-        int numeroAnterior  = Integer.MIN_VALUE;
+        int numeroAnterior = Integer.MIN_VALUE;
         boolean repetidoConsecutivo = false;
 
         System.out.println("Ingrese numeros (un numero negativo para terminar):");
@@ -32,7 +34,7 @@ public class Ejer_22 {
         }
         if (repetidoConsecutivo) {
             System.out.println("Si");
-        }else {
+        } else {
             System.out.println("No");
         }
         scanner.close();

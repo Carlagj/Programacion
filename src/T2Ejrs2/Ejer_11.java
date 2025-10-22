@@ -9,12 +9,13 @@ public class Ejer_11 {
     El juego deberá indicarte si el número introducido es mayor o menor.
      */
 
-    static void main() {
+    public static void main(String[] args) {
+
 
         Scanner scanner = new Scanner(System.in);
 
         // Generar un numero aleatorio entre 1 y 100
-        int numeroS = (int)  (Math.random() * 100) + 1;
+        int numeroS = (int) (Math.random() * 100) + 1;
         int intento = 0;
 
         System.out.println("¡Adivina el numero secreto entre 1 y 100!");
@@ -29,7 +30,7 @@ public class Ejer_11 {
                 System.out.println("El numero es mayor.");
             } else if (intento > numeroS) {
                 System.out.println("El numero es menor.");
-            }else {
+            } else {
                 System.out.println("¡Felicidades!  ¡Has adivinado el numero! :)");
             }
         } while (intento != numeroS);

@@ -17,10 +17,10 @@ public class Ejer_4 {
         System.out.println("Ingrese el segundo numero:");
         double num2 = scanner.nextDouble();
 
-        if (num2 == 0){
+        if (num2 == 0) {
             System.out.println("Error: No se puede dividir entre cero");
-        }else {
-            double resultado = num1 /  num2;
+        } else {
+            double resultado = num1 / num2;
             System.out.println("El resultado de la division es: " + resultado);
         }
         scanner.close();

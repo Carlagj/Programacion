@@ -44,7 +44,7 @@ public class Ejer_3 {
                 dia = " El numero no es valido. Ya que no esta entre el 1 y el 7.";
         }
 
-        System.out.println((dia));
+        System.out.println(dia);
 
         scanner.close();
     }

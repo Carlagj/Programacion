@@ -17,7 +17,7 @@ public class Ejer_5 {
             System.out.println("Tienes " + edad + " años. Puedes votar.");
         } else if (edad > 0) {
             System.out.println("Tienes " + edad + " años. No Puedes votar todavia.");
-        }else {
+        } else {
             System.out.println("Edad No valida. Debe ser numero positivo.");
         }
         scanner.close();

@@ -16,15 +16,15 @@ public class Ejer_2 {
         int num2 = scanner.nextInt();
 
         System.out.println("Escribe el tercer numero");
-        int num3= scanner.nextInt();
+        int num3 = scanner.nextInt();
 
         int mayor;
 
-        if (num1 > num2 && num1 > num3){
+        if (num1 >= num2 && num1 >= num3) {
             mayor = num1;
-        }else if (num2 > num1 && num2 > num3){
+        } else if (num2 >= num1 && num2 >= num3) {
             mayor = num2;
-        }else {
+        } else {
             mayor = num3;
         }
 

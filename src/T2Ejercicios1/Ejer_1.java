@@ -12,13 +12,17 @@ public class Ejer_1 {
 
         int numero = scanner.nextInt();
 
-        if (numero %2 ==0) {
-            System.out.println("El numero " + numero + " es par.");
-        }else {
-            System.out.println("El numero " + numero + " es impar");
+        if (numero == 0) {
+            System.out.println("es Cero");
+        } else if (numero < 0) {
+            System.out.println("Es Negativo");
         }
 
-
+        if (numero % 2 == 0) {
+            System.out.println("El numero " + numero + " es par.");
+        } else {
+            System.out.println("El numero " + numero + " es impar");
+        }
 
 
         scanner.close();
