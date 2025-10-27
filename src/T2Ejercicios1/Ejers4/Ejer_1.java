@@ -21,4 +21,8 @@ public class Ejer_1 {
         scanner.close();
 
     }
+
+    private static boolean esPrimo(int num) {
+
+    }
 }
