@@ -1,10 +1,10 @@
 package T2Ejercicios1.Ejers4;
 
-public class Ejer_1 {
+//public class Ejer_1 {
 
- //Implementa un metodo recursivo que determine si un número es primo
+//Implementa un metodo recursivo que determine si un número es primo
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
 
@@ -26,4 +26,4 @@ public class Ejer_1 {
 
 }
 
-
+*/
