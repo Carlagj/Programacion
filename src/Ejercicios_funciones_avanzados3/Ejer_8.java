@@ -1,5 +1,7 @@
 package Ejercicios_funciones_avanzados3;
 
+import java.util.Scanner;
+
 public class Ejer_8 {
     /*
     Haz dos métodos, una para cifrar() y otro para descifrar() una cadena de caracteres.
@@ -7,21 +9,73 @@ public class Ejer_8 {
     Los caracteres que no sean alfabéticos no registrarán ningún cambio.
      */
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        String cadena = "hola";
-        char caracter = cadena.charAt(0);
-        System.out.println(caracter);
-        System.out.println(caracter + 2);
-        System.out.println((char) (caracter + 2));
+        System.out.print("Introduce una cadena: ");
+        String cadena = sc.nextLine();
 
+        String cifrada = cifrar(cadena);
+        System.out.println("Cifrada: " + cifrada);
+
+        String descifrada = descifrar(cifrada);
+        System.out.println("Descifrada: " + descifrada);
+    }
+
+    public static String cifrar(String cadena) {
         String nuevaCadena = "";
 
         for (int i = 0; i < cadena.length(); i++) {
             char c = cadena.charAt(i);
-            c += 2;
-            nuevaCadena = nuevaCadena + c;
+
+            // Si es minúscula
+            if (c >= 'a' && c <= 'z') {
+                c += 2;
+                if (c > 'z') { // Si pasa del final vuelve al inicio
+                    c -= 26;
+                }
+            }
+            // Si es mayúscula
+            else if (c >= 'A' && c <= 'Z') {
+                c += 2;
+                if (c > 'Z') {
+                    c -= 26;
+                }
+            }
+            // Otros caracteres no cambian
+
+            nuevaCadena = nuevaCadena + c; // MISMO ESTILO QUE PEDISTE
         }
-        System.out.println(nuevaCadena);
+
+        return nuevaCadena;
+    }
+
+    public static String descifrar(String cadena) {
+        String nuevaCadena = "";
+
+        for (int i = 0; i < cadena.length(); i++) {
+            char c = cadena.charAt(i);
+
+            // Minúsculas
+            if (c >= 'a' && c <= 'z') {
+                c -= 2;
+                if (c < 'a') { // Si pasa por debajo vuelve a z
+                    c += 26;
+                }
+            }
+            // Mayúsculas
+            else if (c >= 'A' && c <= 'Z') {
+                c -= 2;
+                if (c < 'A') {
+                    c += 26;
+                }
+            }
+
+            nuevaCadena = nuevaCadena + c; // MISMO ESTILO
+        }
+
+        return nuevaCadena;
+
+
     }
 }
 

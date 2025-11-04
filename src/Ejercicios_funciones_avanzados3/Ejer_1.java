@@ -28,7 +28,7 @@ public class Ejer_1 {
         if (num <= 1) {
             return false;
         }
-        if (divisor == num) {
+        if (divisor * divisor > num) {
             return true;
         }
         if (num % divisor == 0) {
