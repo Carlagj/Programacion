@@ -1,4 +1,4 @@
-package Ejercicios_funciones_avanzados3;
+/*package Ejercicios_funciones_avanzados3;
 
 import java.util.Scanner;
 
@@ -25,9 +25,9 @@ public class Seguro {
 
         sc.close();
 
-        int PrecioBase = 500
+        int PrecioBase = 500;
 
-        CostoSeguro(edad,accidentes,tipo,AntiSeguro,EdadCoche,color,PrecioBase)
+        CostoSeguro(edad,accidentes,tipo,AntiSeguro,EdadCoche,color,PrecioBase);
          double total = CostoSeguro();
         System.out.println("El costo de tu seguro es de: " + );
 
@@ -52,3 +52,4 @@ public class Seguro {
         if ( edad >= 18)
     }
 }
+*/
