@@ -26,7 +26,9 @@ public class Ejer1 {
         }
 
         // Tronco: un palo por cada 5 niveles (mínimo 1)
-        int tronco = Math.max(1, n / 5);
+        int tronco = n / 5;
+
+        if (tronco < 1) tronco = 1;
 
         for (int i = 0; i < tronco; i++) {
 
