@@ -9,5 +9,19 @@ Da como salida: “nesLu”
      */
     public static void main(String[] args) {
 
+                String texto = "Lunes";
+                int rotaciones = 3;
+
+                rotaciones = rotaciones % texto.length();
+
+
+                String resultado = texto.substring(texto.length() - rotaciones)
+                        + texto.substring(0, texto.length() - rotaciones);
+
+                System.out.println("Salida: " + resultado);
+
+
+
+
     }
 }
