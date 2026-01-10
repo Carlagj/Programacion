@@ -9,13 +9,15 @@ Da como salida: 4
      */
   /*  public static void main(String[] args) {
 
-        String cadena = "Hola a todos. Adios";
+        String cadena = "Hola a todos . Adios";
 
-        int cambios = 0;
-        for (int i = 0; i < cadena.length(); i++) {
-            if ()
-                cambios++;
-        }
+
+        String[] palabras = cadena.trim().split("\\s+");
+        int cantidad = palabras.length;
+
+        System.out.println(cantidad);
+
+
 
 
     }

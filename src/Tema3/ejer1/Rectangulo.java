@@ -28,5 +28,81 @@ public class Rectangulo {
     private int largo;
     private int ancho;
 
+    private static final int LARGO_DEFECTO = 5;
+    private static final int ANCHO_DEFECTO = 3;
 
+    // Constructor sin parámetros
+    public Rectangulo() {
+        this.largo = LARGO_DEFECTO;
+        this.ancho = ANCHO_DEFECTO;
+    }
+
+    // Constructor con parámetros
+    public Rectangulo(int largo, int ancho) {
+        if (largo > 0 && ancho > 0) {
+            this.largo = largo;
+            this.ancho = ancho;
+        } else {
+            this.largo = LARGO_DEFECTO;
+            this.ancho = ANCHO_DEFECTO;
+        }
+    }
+
+
+    public int getLargo() {
+        return largo;
+    }
+
+    public int getAncho() {
+        return ancho;
+    }
+
+
+    public void setLargo(int largo) {
+        if (largo > 0) {
+            this.largo = largo;
+        }
+    }
+
+    public void setAncho(int ancho) {
+        if (ancho > 0) {
+            this.ancho = ancho;
+        }
+    }
+
+    // calcular  área
+    public int calcularArea() {
+        return largo * ancho;
+    }
+
+    // calcular  perímetro
+    public int calcularPerimetro() {
+        return 2 * (largo + ancho);
+    }
+
+    // determinar orientación
+    public String orientacion() {
+        if (largo > ancho) {
+            return "Horizontal";
+        } else {
+            return "Vertical";
+        }
+    }
+
+    // mostrar dimensiones
+    public void mostrarDimensiones() {
+        System.out.println("Largo: " + largo);
+        System.out.println("Ancho: " + ancho);
+    }
+
+    // dibujar  rectángulo con asteriscos
+    public void dibujar() {
+        for (int i = 0; i < ancho; i++) {
+            for (int j = 0; j < largo; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
 }
+

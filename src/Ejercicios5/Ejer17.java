@@ -1,5 +1,7 @@
 package Ejercicios5;
 
+import java.util.Scanner;
+
 public class Ejer17 {
     /*
     Desarrolla un programa que averigüe cuantas asignaturas tiene aprobadas un alumno.
@@ -18,5 +20,27 @@ El número de asignaturas no es fijo, pueden ser 4, 5, 6 o más.
      */
     public static void main(String[] args) {
 
+                Scanner sc = new Scanner(System.in);
+
+                System.out.println("Escribe la lista de asignaturas (separadas por :) :");
+                String asignaturasCadena = sc.nextLine();
+
+                System.out.println("Escribe la lista de notas (separadas por :) :");
+                String notasCadena = sc.nextLine();
+
+                String[] asignaturas = asignaturasCadena.split(":");
+                String[] notas = notasCadena.split(":");
+
+                System.out.print("Las asignaturas aprobadas son: ");
+
+                for (int i = 0; i < asignaturas.length; i++) {
+                    int nota = Integer.parseInt(notas[i]);
+
+                    if (nota >= 5) {
+                        System.out.print(asignaturas[i] + " ");
+                    }
+                }
+
+        sc.close();
     }
 }

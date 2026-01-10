@@ -1,8 +1,8 @@
 package Ejercicios_funciones_avanzados3;
 
-class calculadoraTest {
+//class calculadoraTest {
 
-    @org.junit.jupiter.api.Test
+   /* @org.junit.jupiter.api.Test
     void suma() {
     }
-}
+}*/
