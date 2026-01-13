@@ -1,5 +1,7 @@
 package Tema3.ejer2;
 
+import java.util.Random;
+
 /*
 Haz una clase llamada Persona que siga las siguientes condiciones:
 Sus atributos son: nombre, edad, DNI, sexo (H hombre, M mujer), peso y altura.
@@ -40,10 +42,139 @@ Por último, se debe mostrar la información de cada objeto.
 NOTA: Deberás utilizar los métodos que consideres oportunos para realizar todas las acciones indicadas.
  */
 public class Persona {
+
+    public static final int PESO_BAJO = -1;
+    public static final int PESO_IDEAL = 0;
+    public static final int SOBREPESO = 1;
+
     private String nombre;
     private int edad;
-    private String DNI;
-    private boolean sexo;
+    private String dni;
+    private char sexo;
     private double peso;
     private double altura;
+
+
+    public Persona(String nombre) {
+        this.nombre = nombre;
+        this.edad = 0;
+        this.sexo = 'H';
+        this.peso = 0;
+        this.altura = 0;
+        this.generaDNI();
+    }
+
+
+    public Persona(String nombre, int edad, char sexo) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sexo = comprobarSexo(sexo);
+        this.peso = 0;
+        this.altura = 0;
+        this.generaDNI();
+    }
+
+
+    public Persona(String nombre, int edad, char sexo, double peso, double altura) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sexo = comprobarSexo(sexo);
+        this.peso = peso;
+        this.altura = altura;
+        this.generaDNI();
+    }
+
+
+    private char comprobarSexo(char sexo) {
+        if (sexo == 'H' || sexo == 'M') {
+            return sexo;
+        } else {
+            return 'H'; // por defecto
+        }
+    }
+
+
+    public int calcularIMC() {
+        if (altura <= 0) return 0; // Evitar división por cero
+        double imc = peso / (altura * altura);
+        if (imc < 20) return PESO_BAJO;
+        else if (imc <= 25) return PESO_IDEAL;
+        else return SOBREPESO;
+    }
+
+
+    public boolean esMayorDeEdad() {
+        return edad >= 18;
+    }
+
+
+    private void generaDNI() {
+        Random rnd = new Random();
+        int numero = 10000000 + rnd.nextInt(90000000); // 8 cifras
+        char letra = calcularLetraDNI(numero);
+        this.dni = numero + "" + letra;
+    }
+
+
+    private char calcularLetraDNI(int numero) {
+        String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+        int resto = numero % 23;
+        return letras.charAt(resto);
+    }
+
+    // Getters y Setters
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public char getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(char sexo) {
+        this.sexo = comprobarSexo(sexo);
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    // Método toString
+    @Override
+    public String toString() {
+        return "Nombre: " + nombre +
+                "\nEdad: " + edad +
+                "\nDNI: " + dni +
+                "\nSexo: " + sexo +
+                "\nPeso: " + peso +
+                "\nAltura: " + altura;
+    }
 }
