@@ -167,7 +167,6 @@ public class Persona {
         this.altura = altura;
     }
 
-    // Método toString
     @Override
     public String toString() {
         return "Nombre: " + nombre +
