@@ -12,11 +12,17 @@ public class plato {
         this.precio = precio;
     }
 
+    public boolean esAptoParaDiabeticos() {
+        return false;
+    }
+
     public double getPrecio() {
+
         return precio;
     }
 
     public String toString() {
+
         return nombre + " -> " + precio + "€";
     }
 }

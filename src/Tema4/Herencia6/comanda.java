@@ -25,11 +25,22 @@ public class comanda {
     }
 
 
-    public void coste() {
+    public double coste() {
+        double total = 0;
+        for (int i = 0; i < contador; i++) {
+            total += platos[i].getPrecio();
+        }
 
+        return total;
     }
 
-    public void hayDiabeticosEnLaMesa() {
+    public boolean hayDiabeticosEnLaMesa() {
+        for (int i = 0; i < contador; i++) {
+            if (platos[i].esAptoParaDiabeticos()) {
+                return true;
+            }
+        }
+        return false;
 
     }
 }

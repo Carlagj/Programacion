@@ -9,9 +9,14 @@ public class postre extends plato {
         this.diabetico = diabetico;
     }
 
+    public boolean esAptoParaDiabeticos() {
+        return diabetico;
+    }
 
     public String toString() {
         return "Postre: " + super.toString() + " Diabetico: " + (diabetico ? "Si" : "No");
 
     }
+
+
 }
