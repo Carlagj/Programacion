@@ -4,7 +4,7 @@ public class postre extends plato {
     private boolean diabetico;
 
 
-    public postre(String nombre, double precio, boolean diabeticos) {
+    public postre(String nombre, double precio, boolean diabetico) {
         super(nombre, precio);
         this.diabetico = diabetico;
     }

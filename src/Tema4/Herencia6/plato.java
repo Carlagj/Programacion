@@ -13,6 +13,7 @@ public class plato {
     }
 
     public boolean esAptoParaDiabeticos() {
+
         return false;
     }
 

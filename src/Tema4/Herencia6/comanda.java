@@ -5,14 +5,14 @@ public class comanda {
     private int comensales;
     private plato[] platos;
     private int contador;
-    private boolean hayDiabeticos;
+    private boolean requiereMenuDiabetico;
 
-    public comanda(int numeroMesa, int comensales, int cantidad, boolean hayDiabeticos) {
+    public comanda(int numeroMesa, int comensales, int cantidad, boolean requiereMenuDiabetico) {
         this.numeroMesa = numeroMesa;
         this.comensales = comensales;
         this.platos = new plato[cantidad];
         this.contador = 0;
-        this.hayDiabeticos = hayDiabeticos;
+        this.requiereMenuDiabetico = requiereMenuDiabetico;
     }
 
 
@@ -20,7 +20,10 @@ public class comanda {
         if (contador < platos.length) {
             platos[contador] = plato;
             contador++;
+        } else {
+            System.out.println("error: no puede agregar mas platos a esta comanda");
         }
+
 
     }
 
@@ -35,12 +38,14 @@ public class comanda {
     }
 
     public boolean hayDiabeticosEnLaMesa() {
+        if (!requiereMenuDiabetico) return true;
+
         for (int i = 0; i < contador; i++) {
-            if (platos[i].esAptoParaDiabeticos()) {
-                return true;
+            if (!platos[i].esAptoParaDiabeticos()) {
+                return false;
             }
         }
-        return false;
+        return true;
 
     }
 }
