@@ -1,4 +1,4 @@
-package Tema3.ejer1;
+/*package Tema3.ejer1;
 
 import org.junit.jupiter.api.Test;
 
@@ -27,4 +27,4 @@ class RectangTest {
     @Test
     void getPerimetro() {
     }
-}
+}*/

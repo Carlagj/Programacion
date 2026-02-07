@@ -5,14 +5,13 @@ public class comanda {
     private int comensales;
     private plato[] platos;
     private int contador;
-    private boolean requiereMenuDiabetico;
 
-    public comanda(int numeroMesa, int comensales, int cantidad, boolean requiereMenuDiabetico) {
+
+    public comanda(int numeroMesa, int comensales, int cantidad) {
         this.numeroMesa = numeroMesa;
         this.comensales = comensales;
         this.platos = new plato[cantidad];
         this.contador = 0;
-        this.requiereMenuDiabetico = requiereMenuDiabetico;
     }
 
 
@@ -23,8 +22,6 @@ public class comanda {
         } else {
             System.out.println("error: no puede agregar mas platos a esta comanda");
         }
-
-
     }
 
 
@@ -38,14 +35,36 @@ public class comanda {
     }
 
     public boolean hayDiabeticosEnLaMesa() {
-        if (!requiereMenuDiabetico) return true;
-
         for (int i = 0; i < contador; i++) {
-            if (!platos[i].esAptoParaDiabeticos()) {
-                return false;
+            if (!(platos[i] instanceof  postre)) {
+                postre postre = (postre) platos[i];
+                if (postre.esAptoParaDiabeticos()) {}
+                return true;
             }
         }
-        return true;
+        return false;
 
     }
+
+    public String toString() {
+        String resultado = "Mesa: " + numeroMesa +
+                "\nComensales: " + comensales +
+                "\nPlatos:\n";
+
+        for (int i = 0; i < contador; i++) {
+            resultado += " - " + platos[i].toString() + "\n";
+        }
+
+        resultado += "Total: " + coste() + "€";
+        return resultado;
+    }
+
+
+
+
+
+
+
+
+
 }

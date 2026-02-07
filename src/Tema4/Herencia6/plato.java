@@ -2,8 +2,6 @@ package Tema4.Herencia6;
 
 public class plato {
     protected String nombre;
-
-
     protected double precio;
 
 
@@ -12,10 +10,10 @@ public class plato {
         this.precio = precio;
     }
 
-    public boolean esAptoParaDiabeticos() {
-
-        return false;
+    public String getNombre() {
+        return nombre;
     }
+
 
     public double getPrecio() {
 
