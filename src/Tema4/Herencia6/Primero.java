@@ -1,10 +1,10 @@
 package Tema4.Herencia6;
 
-public class primero extends plato {
+public class Primero extends Plato {
     private boolean compartir;
 
 
-    public primero(String nombre, double precio, boolean compartir) {
+    public Primero(String nombre, double precio, boolean compartir) {
         super(nombre, precio);
         this.compartir = compartir;
     }

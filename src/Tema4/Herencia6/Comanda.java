@@ -1,21 +1,21 @@
 package Tema4.Herencia6;
 
-public class comanda {
+public class Comanda {
     private int numeroMesa;
     private int comensales;
-    private plato[] platos;
+    private Plato[] platos;
     private int contador;
 
 
-    public comanda(int numeroMesa, int comensales, int cantidad) {
+    public Comanda(int numeroMesa, int comensales, int cantidad) {
         this.numeroMesa = numeroMesa;
         this.comensales = comensales;
-        this.platos = new plato[cantidad];
+        this.platos = new Plato[cantidad];
         this.contador = 0;
     }
 
 
-    public void agregarPlato(plato plato) {
+    public void agregarPlato(Plato plato) {
         if (contador < platos.length) {
             platos[contador] = plato;
             contador++;
@@ -36,9 +36,10 @@ public class comanda {
 
     public boolean hayDiabeticosEnLaMesa() {
         for (int i = 0; i < contador; i++) {
-            if (!(platos[i] instanceof  postre)) {
-                postre postre = (postre) platos[i];
-                if (postre.esAptoParaDiabeticos()) {}
+            if (!(platos[i] instanceof Postre)) {
+                Postre postre = (Postre) platos[i];
+                if (postre.esAptoParaDiabeticos()) {
+                }
                 return true;
             }
         }
@@ -58,13 +59,6 @@ public class comanda {
         resultado += "Total: " + coste() + "€";
         return resultado;
     }
-
-
-
-
-
-
-
 
 
 }

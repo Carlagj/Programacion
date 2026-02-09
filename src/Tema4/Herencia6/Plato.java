@@ -1,11 +1,11 @@
 package Tema4.Herencia6;
 
-public class plato {
+public class Plato {
     protected String nombre;
     protected double precio;
 
 
-    public plato(String nombre, double precio) {
+    public Plato(String nombre, double precio) {
         this.nombre = nombre;
         this.precio = precio;
     }

@@ -1,10 +1,10 @@
 package Tema4.Herencia6;
 
-public class postre extends plato {
+public class Postre extends Plato {
     private boolean diabetico;
 
 
-    public postre(String nombre, double precio, boolean diabetico) {
+    public Postre(String nombre, double precio, boolean diabetico) {
         super(nombre, precio);
         this.diabetico = diabetico;
     }

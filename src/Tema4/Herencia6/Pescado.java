@@ -1,8 +1,8 @@
 package Tema4.Herencia6;
 
-public class pescado extends plato {
+public class Pescado extends Plato {
 
-    public pescado(String nombre, double precio) {
+    public Pescado(String nombre, double precio) {
         super(nombre, precio);
     }
 

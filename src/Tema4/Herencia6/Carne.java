@@ -1,10 +1,10 @@
 package Tema4.Herencia6;
 
-public class carne extends plato {
+public class Carne extends Plato {
     private String coccion;
 
 
-    public carne(String nombre, double precio, int opcion) {
+    public Carne(String nombre, double precio, int opcion) {
         super(nombre, precio);
         validarcocion(opcion);
     }
