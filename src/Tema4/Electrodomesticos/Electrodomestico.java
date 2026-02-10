@@ -14,8 +14,6 @@ public class Electrodomestico {
     }
 
     private String validarColor(String color) {
-        if (color == null) return "Blanco";
-
         switch (color.toLowerCase()) {
             case "Blanco", "blanco", "BLANCO":
                 return "Blanco";
@@ -36,7 +34,40 @@ public class Electrodomestico {
 
     private char validarConsumo(char consumo) {
         if (consumo >= 'A' && consumo <= 'F') return consumo;
+
         return 'F';
+
+    }
+
+
+    public double precioFinal() {
+
+        double incremento = 0;
+
+        switch (consumoEnergetico) {
+
+            case "A":
+                incremento += 200;
+                break;
+            case "B":
+                incremento += 150;
+                break;
+            case "C":
+                incremento += 100;
+                break;
+            case "D":
+                incremento += 80;
+                break;
+            case "E":
+                incremento += 40;
+                break;
+            case "F":
+                incremento += 10;
+                break;
+
+        }
+
+        return precioBase + incremento;
 
     }
 
@@ -46,7 +77,7 @@ public class Electrodomestico {
                 "precioBase= " + precioBase +
                 ", color= '" + color + '\'' +
                 ", consumoEnergetico= " + consumoEnergetico +
-                ", peso= " + peso +
+                ", peso= " + peso + "Total" + precioFinal() +
                 '}';
     }
 }
