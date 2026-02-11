@@ -11,13 +11,19 @@ public class Television extends Electrodomestico {
     }
 
 
-    private double precioFinal(int pulgadas) {
-        double precio = precioBase;
-        
+    private double precioFinalA() {
         if (pulgadas >= 60) {
             precio += (precio * 0.30);
         }
         return precio;
+
+    }
+
+    private double precioFinalB() {
+        if (oled) {
+            return 250;
+        }
+        return 0;
 
     }
 

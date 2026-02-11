@@ -5,13 +5,16 @@ public class Electrodomestico {
     protected String color;
     protected char consumoEnergetico;
     protected double peso;
+    protected double preciFinal;
 
     public Electrodomestico(double precioBase, String color, char consumoEnergetico, double peso) {
         this.precioBase = precioBase;
         this.color = validarColor(color);
         this.consumoEnergetico = validarConsumo(consumoEnergetico);
         this.peso = peso;
+        this.preciFinal = precioFinal();
     }
+
 
     private String validarColor(String color) {
         switch (color.toLowerCase()) {
@@ -29,6 +32,7 @@ public class Electrodomestico {
                 return "Blanco";
 
         }
+
 
     }
 
@@ -80,4 +84,10 @@ public class Electrodomestico {
                 ", peso= " + peso + "Total" + precioFinal() +
                 '}';
     }
+
+    public double getPreciFinal() {
+        return preciFinal;
+    }
+
+
 }
