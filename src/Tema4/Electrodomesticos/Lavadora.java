@@ -1,7 +1,7 @@
 package Tema4.Electrodomesticos;
 
 public class Lavadora extends Electrodomestico {
-    private double carga;
+/*    private double carga;
 
     public Lavadora(double precioBase, String color, char consumoEnergetico, double peso, double carga) {
         super(precioBase, color, consumoEnergetico, peso);
@@ -25,5 +25,5 @@ public class Lavadora extends Electrodomestico {
                 ", consumoEnergetico=" + consumoEnergetico +
                 ", peso=" + peso + "Precio toral" +
                 '}';
-    }
+    }*/
 }

@@ -1,7 +1,7 @@
 package Tema4.Electrodomesticos;
 
 public class Television extends Electrodomestico {
-    private int pulgadas;
+    /*private int pulgadas;
     private boolean oled;
 
     public Television(double precioBase, String color, char consumoEnergetico, double peso, int pulgadas, boolean oled) {
@@ -26,6 +26,6 @@ public class Television extends Electrodomestico {
         return 0;
 
     }
-
+*/
 
 }
