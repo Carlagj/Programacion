@@ -44,7 +44,7 @@ public class Tienda {
             }
         }
         if (clienteEncontrado != null && juegoEncontrado != null && juegoEncontrado.getStock() > 0) {
-            juegoEncontrado.setStock(juegoEncontrado.getStock() - 1); // Actualización de stock
+            juegoEncontrado.setStock(juegoEncontrado.getStock() - 1);
             List<VideoJuego> articulosVenta = new ArrayList<>();
             articulosVenta.add(juegoEncontrado);
             historialVentas.add(new Venta(clienteEncontrado, articulosVenta));
