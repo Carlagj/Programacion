@@ -9,7 +9,7 @@ public class Venta {
     private LocalDate fecha;
 
 
-    public Venta(Cliente cliente, List<VideoJuego> articulos, LocalDate fecha) {
+    public Venta(Cliente cliente, List<VideoJuego> articulos) {
         this.cliente = cliente;
         this.articulos = articulos;
         this.fecha = LocalDate.now();
@@ -38,5 +38,15 @@ public class Venta {
     public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
+
+    public double getTotalVenta() {
+        double total = 0;
+        for (VideoJuego videojuego : articulos) {
+            total += videojuego.getPrecio();
+        }
+        return total;
+    }
 }
+
+
 
