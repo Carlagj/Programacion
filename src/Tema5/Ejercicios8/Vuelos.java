@@ -1,5 +1,6 @@
 package Tema5.Ejercicios8;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -59,6 +60,7 @@ public class Vuelos {
         // TODO - Generar un set con los identificadores de los vuelos
         System.out.println(getIdentificadoresVuelos(vuelosPasajerosCoste));
 
+
         // TODO - Mostrar el precio del billete más caro
         System.out.printf(
                 "El billete más caro ha sido de %.2f %n",
@@ -81,28 +83,66 @@ public class Vuelos {
     public static Set<String> getIdentificadoresVuelos(
             Map<String, Map<String, Double>> vuelosPasajerosCoste
     ) {
-        // TODO
-        return null;
+        return vuelosPasajerosCoste.keySet();
     }
 
     public static Double getBilleteMasCaro(
             Map<String, Map<String, Double>> vuelosPasajerosCoste
     ) {
-        // TODO
-        return 0.0;
+        Double max = 0.0;
+
+        for (Map<String, Double> pasajeros : vuelosPasajerosCoste.values()) {
+            Double maxVuelo = Collections.max(pasajeros.values());
+            if (maxVuelo > max) {
+                max = maxVuelo;
+            }
+        }
+
+        return max;
     }
 
     public static Map<String, Double> getPreciosMedios(
             Map<String, Map<String, Double>> vuelosPasajerosCoste
     ) {
-        // TODO
-        return null;
+        Map<String, Double> medias = new HashMap<>();
+
+        for (String vuelo : vuelosPasajerosCoste.keySet()) {
+            Map<String, Double> pasajeros = vuelosPasajerosCoste.get(vuelo);
+
+
+            double suma = 0;
+            int contador = 0;
+
+            for (Double precio : pasajeros.values()) {
+                suma = suma + precio;
+                contador++;
+            }
+
+            double media = suma / contador;
+            medias.put(vuelo, media);
+        }
+
+        return medias;
     }
 
     public static Map<String, Double> getGastoPorDNI(
             Map<String, Map<String, Double>> vuelosPasajerosCoste
     ) {
-        // TODO
-        return null;
+        Map<String, Double> gastoTotal = new HashMap<>();
+
+        for (Map<String, Double> pasajeros : vuelosPasajerosCoste.values()) {
+            for (String dni : pasajeros.keySet()) {
+                double precio = pasajeros.get(dni);
+
+                if (gastoTotal.containsKey(dni)) {
+                    double acumulado = gastoTotal.get(dni);
+                    gastoTotal.put(dni, acumulado + precio);
+
+                } else {
+                    gastoTotal.put(dni, precio);
+                }
+            }
+        }
+        return gastoTotal;
     }
 }
