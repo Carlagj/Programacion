@@ -7,9 +7,11 @@ public class Ejer2 {
         List<String> alumnos = List.of("ana", "luis", "guzmán", "marta");
 
         List<String> alumnosMayusculas = alumnos.stream()
-                .map(nombre -> nombre.toUpperCase())
+                .map(nombre -> nombre.toUpperCase())//string:: toUpperCase
                 .toList();
 
         System.out.println(alumnosMayusculas);
+
+
     }
 }
