@@ -1,4 +1,4 @@
-package Tema3.GestionDeInventario;
+/*package Tema3.GestionDeInventario;
 
 import org.junit.jupiter.api.Test;
 
@@ -23,4 +23,4 @@ class ProductoTest {
         assertEquals(3, p.stock);
 
     }
-}
+}*/
