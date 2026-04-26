@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class Paises {
     private static final String url = "jdbc:mysql://localhost:3306/geografia_db";
-    private static final String user = "root";
-    private static final String pass = "password";
+    private static final String user = "system";
+    private static final String pass = "system";
     private Connection conexion;
 
 
